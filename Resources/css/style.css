@@ -1,0 +1,21 @@
+@charset "UTF-8";
+/* ふーふー */
+/* mixin */
+/* line 1, ../../scss/style.scss */
+.foo, #global div {
+  width: 50%;
+}
+
+/* line 1, ../../scss/style.scss */
+#global ul {
+  width: 80%;
+}
+/* line 1, ../../scss/style.scss */
+#global li {
+  width: 80%;
+}
+/* line 1, ../../scss/style.scss */
+#global div {
+  border-width: 1px;
+  border-color: #eee;
+}
