@@ -1,4 +1,48 @@
-/*! PROJECT_NAME - v0.1.0 - 2012-10-18
+/*! PROJECT_NAME - v0.1.0 - 2012-12-21
+* http://PROJECT_WEBSITE/
+* Copyright (c) 2012 hisasann; Licensed MIT */
+
+/*! PROJECT_NAME - v0.1.0 - 2012-12-21
+* http://PROJECT_WEBSITE/
+* Copyright (c) 2012 hisasann; Licensed MIT */
+
+/*! PROJECT_NAME - v0.1.0 - 2012-12-21
+* http://PROJECT_WEBSITE/
+* Copyright (c) 2012 hisasann; Licensed MIT */
+
+/*! PROJECT_NAME - v0.1.0 - 2012-12-21
+* http://PROJECT_WEBSITE/
+* Copyright (c) 2012 hisasann; Licensed MIT */
+
+/*! PROJECT_NAME - v0.1.0 - 2012-12-21
+* http://PROJECT_WEBSITE/
+* Copyright (c) 2012 hisasann; Licensed MIT */
+
+/*! PROJECT_NAME - v0.1.0 - 2012-12-21
+* http://PROJECT_WEBSITE/
+* Copyright (c) 2012 hisasann; Licensed MIT */
+
+/*! PROJECT_NAME - v0.1.0 - 2012-12-21
+* http://PROJECT_WEBSITE/
+* Copyright (c) 2012 hisasann; Licensed MIT */
+
+/*! PROJECT_NAME - v0.1.0 - 2012-12-21
+* http://PROJECT_WEBSITE/
+* Copyright (c) 2012 hisasann; Licensed MIT */
+
+/*! PROJECT_NAME - v0.1.0 - 2012-12-21
+* http://PROJECT_WEBSITE/
+* Copyright (c) 2012 hisasann; Licensed MIT */
+
+/*! PROJECT_NAME - v0.1.0 - 2012-12-21
+* http://PROJECT_WEBSITE/
+* Copyright (c) 2012 hisasann; Licensed MIT */
+
+/*! PROJECT_NAME - v0.1.0 - 2012-12-21
+* http://PROJECT_WEBSITE/
+* Copyright (c) 2012 hisasann; Licensed MIT */
+
+/*! PROJECT_NAME - v0.1.0 - 2012-12-21
 * http://PROJECT_WEBSITE/
 * Copyright (c) 2012 hisasann; Licensed MIT */
 

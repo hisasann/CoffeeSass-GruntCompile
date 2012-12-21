@@ -1,20 +1,20 @@
 @charset "UTF-8";
 /* ほげほげ */
 /* mixin */
-/* line 1, ../../scss/style2.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/hisamatsu\/Dropbox\/code\/coffee\/Coffee-Scss-Grunt-Buildup\/scss\/style2\.scss}line{font-family:\000031}}
 .foo, #global div {
   width: 50%;
 }
 
-/* line 1, ../../scss/style2.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/hisamatsu\/Dropbox\/code\/coffee\/Coffee-Scss-Grunt-Buildup\/scss\/style2\.scss}line{font-family:\000031}}
 #global ul {
   width: 80%;
 }
-/* line 1, ../../scss/style2.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/hisamatsu\/Dropbox\/code\/coffee\/Coffee-Scss-Grunt-Buildup\/scss\/style2\.scss}line{font-family:\000031}}
 #global li {
   width: 80%;
 }
-/* line 1, ../../scss/style2.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/hisamatsu\/Dropbox\/code\/coffee\/Coffee-Scss-Grunt-Buildup\/scss\/style2\.scss}line{font-family:\000031}}
 #global div {
   border-width: 1px;
   border-color: #eee;

@@ -1,1 +1,1 @@
-/* ふーふー */$width: 80%;/* mixin */@mixin hogehoge {  border: {    width: 1px;    color: #eee;  }}.foo {  width: 50%;}#global {  ul {    width: $width;  }  li {    width: $width;  }  div {    @include hogehoge;    @extend .foo  }}
+/* テスト */$width: 80%;/* mixin */@mixin hogehoge {  border: {    width: 1px;    color: #eee;  }}.foo {  width: 80%;}#global {  ul {    width: $width;  }  li {    width: $width;  }  div {    @include hogehoge;    @extend .foo  }}

@@ -19,18 +19,49 @@ module.exports = function(grunt) {
     coffee: {
       app: {
         src : ['coffee/index.coffee'],
-        dest : 'Resources/js/'
+        dest : 'Resources/js/',
+        options: {
+          bare: false // trueで外側の (function(){ ... }).call(this); を取り除きます
+        }
       },
       sample: {
-        src : ['coffee/sample/*.coffee'],
-        dest : 'coffee/sample/'
+        src : ['coffee/sample/'],
+        dest : 'coffee/sample/',
+        options: {
+          bare: false // trueで外側の (function(){ ... }).call(this); を取り除きます
+        }
       }
     },
     // ------------------------------------------------------------------------
+//     compass: {
+//       sample: {
+//         src : ['scss'],
+//         dest : 'Resources/css'
+//       }
+//     },
     compass: {
-      sample: {
-        src : ['scss'],
-        dest : 'Resources/css'
+      dev: {
+        src: 'scss',
+        dest: 'Resources/css',
+        linecomments: true,
+        forcecompile: true,
+        require: [
+        ],
+        debugsass: true,
+        images: '',
+        relativeassets: true
+      },
+      prod: {
+        src: 'scss',
+        dest: 'Resources/css',
+        outputstyle: 'compressed',
+        linecomments: false,
+        forcecompile: true,
+        require: [
+        ],
+        debugsass: false,
+        images: '',
+        relativeassets: true
       }
     },
     // ------------------------------------------------------------------------
@@ -63,7 +94,8 @@ module.exports = function(grunt) {
       },
       compass:{
         files:['scss/**/*.scss'],
-        tasks:'compass'
+//         tasks:'compass'
+        tasks: ['compass-dev']
       }
     },
     // ------------------------------------------------------------------------
@@ -86,8 +118,17 @@ module.exports = function(grunt) {
     uglify: {}
   });
 
+  // load npm tasks.
+  grunt.loadNpmTasks('grunt-coffee');
+  grunt.loadNpmTasks('grunt-compass');
+
+  // compass task.
+  grunt.registerTask('compass-dev', ['compass-clean', 'compass:dev']);
+  grunt.registerTask('compass-prod', ['compass-clean', 'compass:prod']);
+
   // Default task.
-  grunt.registerTask('default', 'coffee compass concat min');
+  grunt.registerTask('default', 'coffee compass-dev concat min');
+
 
   // --------------------------------------------------------------------------
   //
@@ -120,47 +161,47 @@ module.exports = function(grunt) {
   };
 
   // task: coffee
-  (function (grunt) {
-    grunt.registerHelper('coffeec', function (fromdir, dest, done) {
-      var args = { cmd:'coffee', args:[ '--compile', '--output', dest, fromdir ] };
-      grunt.helper('exec', args, function (err, stdout, code) {
-        handleResult(err, stdout, code, done);
-      });
-    });
-
-    grunt.registerMultiTask('coffee', 'compile CoffeeScript', function () {
-      grunt.helper('coffeec', this.data.src, this.data.dest, this.async());
-    });
-  }(grunt));
+//   (function (grunt) {
+//     grunt.registerHelper('coffeec', function (fromdir, dest, done) {
+//       var args = { cmd:'coffee', args:[ '--compile', '--output', dest, fromdir ] };
+//       grunt.helper('exec', args, function (err, stdout, code) {
+//         handleResult(err, stdout, code, done);
+//       });
+//     });
+//
+//     grunt.registerMultiTask('coffee', 'compile CoffeeScript', function () {
+//       grunt.helper('coffeec', this.data.src, this.data.dest, this.async());
+//     });
+//   }(grunt));
 
   // task: sass
-  (function (grunt) {
-    grunt.registerHelper('sassc', function (from, dest, done) {
-      var args = { cmd:'sass', args:[ from + ':' + dest] };
-      grunt.helper('exec', args, function (err, stdout, code) {
-        handleResult(err, stdout, code, done);
-      });
-    });
-
-    grunt.registerMultiTask('sass', 'compile sass', function () {
-      grunt.helper('sassc', this.data.src, this.data.dest, this.async());
-    });
-  }(grunt));
+//   (function (grunt) {
+//     grunt.registerHelper('sassc', function (from, dest, done) {
+//       var args = { cmd:'sass', args:[ from + ':' + dest] };
+//       grunt.helper('exec', args, function (err, stdout, code) {
+//         handleResult(err, stdout, code, done);
+//       });
+//     });
+//
+//     grunt.registerMultiTask('sass', 'compile sass', function () {
+//       grunt.helper('sassc', this.data.src, this.data.dest, this.async());
+//     });
+//   }(grunt));
 
   // task: compass
   // gem install compass
-  (function (grunt) {
-    grunt.registerHelper('compassc', function (fromdir, destdir , done) {
-      var args = { cmd:'compass compile', args:[ '--sass-dir ' + fromdir + ' --css-dir ' + destdir + ' --boring' ] };
-      grunt.helper('exec', args, function (err, stdout, code) {
-        handleResult(err, stdout, code, done);
-      });
-    });
-
-    grunt.registerMultiTask('compass', 'compile sass', function () {
-      grunt.helper('compassc', this.data.src, this.data.dest, this.async());
-    });
-  }(grunt));
+//   (function (grunt) {
+//     grunt.registerHelper('compassc', function (fromdir, destdir , done) {
+//       var args = { cmd:'compass compile', args:[ '--sass-dir ' + fromdir + ' --css-dir ' + destdir + ' --boring' ] };
+//       grunt.helper('exec', args, function (err, stdout, code) {
+//         handleResult(err, stdout, code, done);
+//       });
+//     });
+//
+//     grunt.registerMultiTask('compass', 'compile sass', function () {
+//       grunt.helper('compassc', this.data.src, this.data.dest, this.async());
+//     });
+//   }(grunt));
 
 };
 

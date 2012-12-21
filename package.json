@@ -1,0 +1,23 @@
+{
+  "name": "Coffee-Scss-Grunt-Buildup",
+  "version": "0.0.1",
+  "author": "hisasann",
+  "license": "BSD",
+  "description": "ERROR: No README.md file found!",
+  "main": "grunt.js",
+  "dependencies": {
+    "grunt": "*",
+    "grunt-coffee": "*",
+    "grunt-contrib": "*",
+    "grunt-sass": "*",
+    "grunt-compass": "*"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/hisasann/CoffeeSass-GruntCompile.git"
+  }
+}
