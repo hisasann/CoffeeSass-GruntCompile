@@ -38,6 +38,7 @@
 * [grunt-compass](https://github.com/kahlil/grunt-compass)
 
 これらも dependencies に含めている
+
 grunt-coffee を入れていないのは、再帰的な階層をコンパイルする方法がうまく動かなかったため
 
 ## インストールする
