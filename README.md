@@ -17,7 +17,6 @@
       "main": "grunt.js",
       "dependencies": {
         "grunt": "*",
-        "grunt-coffee": "*",
         "grunt-contrib": "*",
         "grunt-sass": "*",
         "grunt-compass": "*"
@@ -34,11 +33,12 @@
 
 *CoffeeScript* と *Sass* をコンパイルするので、
 
-* [grunt-coffee](https://github.com/avalade/grunt-coffee)
+* [grunt-contrib](https://github.com/gruntjs/grunt-contrib)
 * [grunt-sass](https://github.com/sindresorhus/grunt-sass)
 * [grunt-compass](https://github.com/kahlil/grunt-compass)
 
-これらもdependenciesに含めている
+これらも dependencies に含めている
+grunt-coffee を入れていないのは、再帰的な階層をコンパイルする方法がうまく動かなかったため
 
 ## インストールする
 
