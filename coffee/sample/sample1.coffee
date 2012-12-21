@@ -1,5 +1,5 @@
 hoge = "hoge"
-foo = 1
+foo = 2
 bar = false
 console.log "ooge"
 
